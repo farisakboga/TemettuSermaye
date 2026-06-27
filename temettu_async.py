@@ -73,7 +73,7 @@ async def sembol_cek(sembol: str, page: Page, deneme: int = 0) -> dict:
         # Satırlar baştan var ama değerler (oran, tutar) geç dolabiliyor
         onceki_icerik = ""
         for _ in range(5):
-            await page.wait_for_timeout(2000)
+            await page.wait_for_timeout(3000)
             icerik = await page.evaluate("""
                 () => Array.from(document.querySelectorAll('table tbody tr td'))
                           .map(td => td.innerText.trim())
