@@ -2,7 +2,7 @@ name: Temettu Guncelle
 
 on:
   schedule:
-  - cron: '0 19 * * 1-5'   # Haftaiçi (Pzt-Cum) 19:00 UTC = 22:00 TR
+  - cron: '0 19 * * *'   # Hergün 19:00 UTC = 22:00 TR
   workflow_dispatch:         # Elle de tetiklenebilir
 
 jobs:
