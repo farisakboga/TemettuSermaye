@@ -21,8 +21,8 @@ from playwright.async_api import async_playwright, Page
 CIKTI_JSON      = "temettu_verileri.json"
 HATA_LOG        = "hata_log.json"
 CONCURRENT_TABS = 20       # Aynı anda açık tab sayısı — 15-25 arası önerilir
-SAYFA_TIMEOUT   = 40000    # Sayfa yükleme timeout (ms) — networkidle için artırıldı
-YENIDEN_DENEME  = 3        # Hata durumunda kaç kez tekrar denesin
+SAYFA_TIMEOUT   = 35000    # Sayfa yükleme timeout (ms) — networkidle için artırıldı
+YENIDEN_DENEME  = 2        # Hata durumunda kaç kez tekrar denesin
 
 # ─── Sembol listesi ──────────────────────────────────────────────────────────
 # İstersen harici dosyadan oku: semboller = Path("semboller.txt").read_text().split()
@@ -73,7 +73,7 @@ async def sembol_cek(sembol: str, page: Page, deneme: int = 0) -> dict:
         # Satırlar baştan var ama değerler (oran, tutar) geç dolabiliyor
         onceki_icerik = ""
         for _ in range(5):
-            await page.wait_for_timeout(1000)
+            await page.wait_for_timeout(2000)
             icerik = await page.evaluate("""
                 () => Array.from(document.querySelectorAll('table tbody tr td'))
                           .map(td => td.innerText.trim())
