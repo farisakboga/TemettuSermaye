@@ -21,7 +21,7 @@ from playwright.async_api import async_playwright, Page
 CIKTI_JSON      = "temettu_verileri.json"
 HATA_LOG        = "hata_log.json"
 CONCURRENT_TABS = 20       # Aynı anda açık tab sayısı — 15-25 arası önerilir
-SAYFA_TIMEOUT   = 35000    # Sayfa yükleme timeout (ms) — networkidle için artırıldı
+SAYFA_TIMEOUT   = 40000    # Sayfa yükleme timeout (ms) — networkidle için artırıldı
 YENIDEN_DENEME  = 3        # Hata durumunda kaç kez tekrar denesin
 
 # ─── Sembol listesi ──────────────────────────────────────────────────────────
