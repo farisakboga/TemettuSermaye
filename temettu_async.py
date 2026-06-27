@@ -21,8 +21,7 @@ from playwright.async_api import async_playwright, Page
 CIKTI_JSON      = "temettu_verileri.json"
 HATA_LOG        = "hata_log.json"
 CONCURRENT_TABS = 20       # Aynı anda açık tab sayısı — 15-25 arası önerilir
-BEKLE_MS        = 5000     # JS render bekleme (ms)
-SAYFA_TIMEOUT   = 25000    # Sayfa yükleme timeout (ms)
+SAYFA_TIMEOUT   = 35000    # Sayfa yükleme timeout (ms) — networkidle için artırıldı
 YENIDEN_DENEME  = 2        # Hata durumunda kaç kez tekrar denesin
 
 # ─── Sembol listesi ──────────────────────────────────────────────────────────
@@ -61,13 +60,26 @@ def tablo_isle(tablo_js: dict) -> list:
 async def sembol_cek(sembol: str, page: Page, deneme: int = 0) -> dict:
     sonuc = {"sembol": sembol, "temettu": [], "sermaye_artirimi": [], "hata": None}
     try:
-        await page.goto(url_olustur(sembol), wait_until="domcontentloaded", timeout=SAYFA_TIMEOUT)
-        await page.wait_for_timeout(BEKLE_MS)
+        # networkidle: tüm XHR/fetch istekleri tamamlanana kadar bekler
+        await page.goto(url_olustur(sembol), wait_until="networkidle", timeout=SAYFA_TIMEOUT)
 
+        # Tablo yoksa boş dön
         try:
-            await page.wait_for_selector("table", timeout=8000)
+            await page.wait_for_selector("table tbody tr", timeout=8000)
         except Exception:
-            pass  # Tablo yoksa boş dön
+            return sonuc
+
+        # Satır sayısı stabilize olana kadar bekle (maks 4 sn)
+        # "Tarihi gelmemiş" temettüler networkidle'dan 1-2 sn sonra render olabiliyor
+        onceki_sayi = -1
+        for _ in range(4):
+            await page.wait_for_timeout(1000)
+            sayi = await page.evaluate(
+                "() => document.querySelectorAll('table tbody tr').length"
+            )
+            if sayi == onceki_sayi:
+                break  # Satır sayısı değişmedi, render tamamlandı
+            onceki_sayi = sayi
 
         tablolar = await page.evaluate("""
             () => Array.from(document.querySelectorAll('table')).map(tbl => ({
