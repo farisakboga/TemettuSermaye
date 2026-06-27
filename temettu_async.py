@@ -69,17 +69,19 @@ async def sembol_cek(sembol: str, page: Page, deneme: int = 0) -> dict:
         except Exception:
             return sonuc
 
-        # Satır sayısı stabilize olana kadar bekle (maks 4 sn)
-        # "Tarihi gelmemiş" temettüler networkidle'dan 1-2 sn sonra render olabiliyor
-        onceki_sayi = -1
-        for _ in range(4):
+        # Hücre içerikleri stabilize olana kadar bekle (maks 5 sn)
+        # Satırlar baştan var ama değerler (oran, tutar) geç dolabiliyor
+        onceki_icerik = ""
+        for _ in range(5):
             await page.wait_for_timeout(1000)
-            sayi = await page.evaluate(
-                "() => document.querySelectorAll('table tbody tr').length"
-            )
-            if sayi == onceki_sayi:
-                break  # Satır sayısı değişmedi, render tamamlandı
-            onceki_sayi = sayi
+            icerik = await page.evaluate("""
+                () => Array.from(document.querySelectorAll('table tbody tr td'))
+                          .map(td => td.innerText.trim())
+                          .join('|')
+            """)
+            if icerik == onceki_icerik:
+                break  # İçerik değişmedi, render tamamlandı
+            onceki_icerik = icerik
 
         tablolar = await page.evaluate("""
             () => Array.from(document.querySelectorAll('table')).map(tbl => ({
