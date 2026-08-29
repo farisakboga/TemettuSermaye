@@ -3453,6 +3453,14 @@
     ],
     "sermaye_artirimi": [
       {
+        "Tarih": "Onay bekliyor",
+        "Bölünme Sonrası Sermaye (TL)": "128.000.000 ₺",
+        "Bedelli Oran (%)": "",
+        "Tahsisli Oran (%)": "93,94",
+        "Bedelsiz IK Oran (%)": "",
+        "Bedelsiz Temettü Oran (%)": ""
+      },
+      {
         "Tarih": "30-01-2024",
         "Bölünme Sonrası Sermaye (TL)": "66.000.000 ₺",
         "Bedelli Oran (%)": "100,00",
@@ -13285,7 +13293,7 @@
     "temettu": [
       {
         "Tarih": "Belirtilmedi",
-        "Temettü Verim (%)": "% 0,00",
+        "Temettü Verim (%)": "% 0,69",
         "Hisse Başı Brüt TL": "0,73 ₺",
         "Hisse Başı Net TL": "0,6175 ₺",
         "Toplam Temettü (TL)": "27.315.163 ₺",
@@ -13293,7 +13301,7 @@
       },
       {
         "Tarih": "Belirtilmedi",
-        "Temettü Verim (%)": "% 0,00",
+        "Temettü Verim (%)": "% 0,69",
         "Hisse Başı Brüt TL": "0,73 ₺",
         "Hisse Başı Net TL": "0,6175 ₺",
         "Toplam Temettü (TL)": "27.315.163 ₺",
@@ -20009,7 +20017,7 @@
     "temettu": [
       {
         "Tarih": "Belirtilmedi",
-        "Temettü Verim (%)": "% 0,36",
+        "Temettü Verim (%)": "% 0,00",
         "Hisse Başı Brüt TL": "0,10 ₺",
         "Hisse Başı Net TL": "0,0850 ₺",
         "Toplam Temettü (TL)": "12.960.000 ₺",
@@ -24819,7 +24827,7 @@
     "temettu": [
       {
         "Tarih": "31-12-2026",
-        "Temettü Verim (%)": "% 0,00",
+        "Temettü Verim (%)": "% 0,61",
         "Hisse Başı Brüt TL": "0,10 ₺",
         "Hisse Başı Net TL": "0,0872 ₺",
         "Toplam Temettü (TL)": "199.999.995 ₺",
@@ -25043,7 +25051,7 @@
     "temettu": [
       {
         "Tarih": "10-05-2027",
-        "Temettü Verim (%)": "% 1,74",
+        "Temettü Verim (%)": "% 0,00",
         "Hisse Başı Brüt TL": "0,31 ₺",
         "Hisse Başı Net TL": "0,2603 ₺",
         "Toplam Temettü (TL)": "107.202.480 ₺",
@@ -25051,7 +25059,7 @@
       },
       {
         "Tarih": "08-02-2027",
-        "Temettü Verim (%)": "% 1,74",
+        "Temettü Verim (%)": "% 0,00",
         "Hisse Başı Brüt TL": "0,31 ₺",
         "Hisse Başı Net TL": "0,2603 ₺",
         "Toplam Temettü (TL)": "107.202.480 ₺",
@@ -25059,7 +25067,7 @@
       },
       {
         "Tarih": "09-11-2026",
-        "Temettü Verim (%)": "% 1,74",
+        "Temettü Verim (%)": "% 0,00",
         "Hisse Başı Brüt TL": "0,31 ₺",
         "Hisse Başı Net TL": "0,2603 ₺",
         "Toplam Temettü (TL)": "107.202.480 ₺",
@@ -33484,7 +33492,7 @@
     "temettu": [
       {
         "Tarih": "30-09-2026",
-        "Temettü Verim (%)": "% 0,00",
+        "Temettü Verim (%)": "% 1,53",
         "Hisse Başı Brüt TL": "0,21 ₺",
         "Hisse Başı Net TL": "0,1771 ₺",
         "Toplam Temettü (TL)": "49.999.992 ₺",
@@ -36187,7 +36195,7 @@
     "temettu": [
       {
         "Tarih": "06-11-2026",
-        "Temettü Verim (%)": "% 0,11",
+        "Temettü Verim (%)": "% 0,00",
         "Hisse Başı Brüt TL": "0,04 ₺",
         "Hisse Başı Net TL": "0,0303 ₺",
         "Toplam Temettü (TL)": "29.411.745 ₺",
@@ -36195,7 +36203,7 @@
       },
       {
         "Tarih": "08-09-2026",
-        "Temettü Verim (%)": "% 0,11",
+        "Temettü Verim (%)": "% 0,00",
         "Hisse Başı Brüt TL": "0,04 ₺",
         "Hisse Başı Net TL": "0,0303 ₺",
         "Toplam Temettü (TL)": "29.411.745 ₺",
@@ -40861,7 +40869,7 @@
     ],
     "sermaye_artirimi": [
       {
-        "Tarih": "Onay bekliyor",
+        "Tarih": "19-08-2026",
         "Bölünme Sonrası Sermaye (TL)": "400.000.000 ₺",
         "Bedelli Oran (%)": "",
         "Tahsisli Oran (%)": "",
@@ -47073,6 +47081,14 @@
     ],
     "sermaye_artirimi": [
       {
+        "Tarih": "Onay bekliyor",
+        "Bölünme Sonrası Sermaye (TL)": "1.500.000.000 ₺",
+        "Bedelli Oran (%)": "",
+        "Tahsisli Oran (%)": "",
+        "Bedelsiz IK Oran (%)": "50,00",
+        "Bedelsiz Temettü Oran (%)": ""
+      },
+      {
         "Tarih": "10-09-2025",
         "Bölünme Sonrası Sermaye (TL)": "1.000.000.000 ₺",
         "Bedelli Oran (%)": "",
@@ -49699,7 +49715,7 @@
     "temettu": [
       {
         "Tarih": "07-12-2026",
-        "Temettü Verim (%)": "% 0,81",
+        "Temettü Verim (%)": "% 0,00",
         "Hisse Başı Brüt TL": "2,17 ₺",
         "Hisse Başı Net TL": "1,8436 ₺",
         "Toplam Temettü (TL)": "13.500.000 ₺",
@@ -50397,7 +50413,7 @@
     "temettu": [
       {
         "Tarih": "09-12-2026",
-        "Temettü Verim (%)": "% 0,00",
+        "Temettü Verim (%)": "% 3,86",
         "Hisse Başı Brüt TL": "4,00 ₺",
         "Hisse Başı Net TL": "3,4000 ₺",
         "Toplam Temettü (TL)": "8.800.000.000 ₺",
